@@ -41,6 +41,7 @@ This function should only modify configuration layer settings."
      lsp
      markdown
      multiple-cursors
+     (c-c++ :variables c-c++-backend 'lsp-clangd)
      org
      ;; (shell :variables
      ;;        shell-default-height 30
