@@ -41,6 +41,7 @@ This function should only modify configuration layer settings."
      lsp
      markdown
      ranger
+     (python :variables python-backend 'anaconda)
      multiple-cursors
      (c-c++ :variables c-c++-backend 'lsp-clangd)
      org
