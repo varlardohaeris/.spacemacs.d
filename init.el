@@ -40,6 +40,7 @@ This function should only modify configuration layer settings."
      helm
      lsp
      markdown
+     ranger
      multiple-cursors
      (c-c++ :variables c-c++-backend 'lsp-clangd)
      org
