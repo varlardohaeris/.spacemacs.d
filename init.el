@@ -43,7 +43,7 @@ This function should only modify configuration layer settings."
      ranger
      (python :variables python-backend 'anaconda)
      multiple-cursors
-     (c-c++ :variables c-c++-backend 'lsp-clangd)
+     (c-c++ :variables c-c++-backend 'lsp-ccls)
      org
      ;; (shell :variables
      ;;        shell-default-height 30
