@@ -32,7 +32,8 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(vimscript
+   '(rust
+     vimscript
      auto-completion
      better-defaults
      emacs-lisp
@@ -68,7 +69,7 @@ This function should only modify configuration layer settings."
    ;; `dotspacemacs/user-config'. To use a local version of a package, use the
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(shades-of-purple-theme)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -218,7 +219,9 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(doom-dracula
+   dotspacemacs-themes '(
+                         shades-of-purple
+                         doom-dracula
                          spacemacs-dark
                          spacemacs-light)
 
@@ -239,7 +242,7 @@ It should only modify the values of Spacemacs settings."
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
    dotspacemacs-default-font '(("JetBrains Mono"
-                                :size 16
+                                :size 20
                                 :weight medium
                                 :width normal))
 
@@ -607,5 +610,6 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (setq custom-file "~/.spacemacs.d/custom.el")
+  ;; (load-theme 'shades-of-purple t)
   )
 
