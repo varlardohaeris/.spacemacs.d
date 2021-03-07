@@ -39,7 +39,8 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      (ocaml :variables ocaml-format-on-save t)
-     helm
+     ivy
+     (multiple-cursors :variables multiple-cursors-backend 'evil-mc)
      lsp
      markdown
      ranger
@@ -69,7 +70,9 @@ This function should only modify configuration layer settings."
    ;; `dotspacemacs/user-config'. To use a local version of a package, use the
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(shades-of-purple-theme)
+   dotspacemacs-additional-packages '(shades-of-purple-theme
+                                      all-the-icons-ivy-rich
+                                      )
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -610,6 +613,7 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (setq custom-file "~/.spacemacs.d/custom.el")
-  ;; (load-theme 'shades-of-purple t)
+  (all-the-icons-ivy-rich-mode 1)
+  (ivy-rich-mode 1)
   )
 
